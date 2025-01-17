@@ -1,0 +1,49 @@
+#include <stdio.h>
+#define SIZE 8
+
+int Minimum (int A[ ], int n)
+{
+	int i, min = 0;
+	for (i = 1; i < n; i++)
+		if(A[min] > A[i])	
+		min = i;
+		return min;
+}
+
+int Maximum (int A[ ], int n)
+{
+	int i, max = 0;
+	for (i = 1; i < n; i++)
+		if(A[max] < A[i])	
+		max = i;
+		return max;
+}
+
+int sum (int A[ ], int n)
+{
+	int i, sum = 0;
+	for (i = 0; i < n; i++)
+		sum = sum + A[i];	
+	return sum;
+}
+
+int avg (int A[ ], int n)
+{
+	int i, sum = 0;
+	for (i = 0; i < n; i++)
+		sum = sum + A[i];	
+	return sum;
+}
+
+int main ()
+{
+	int A[SIZE] = {10, 23, 11, 63, -55, 99, -20, 88};
+	printf("Minimum is in %d\n", Minimum(A, SIZE));
+	
+	printf("Maximum is in %d\n", Maximum(A, SIZE));
+	
+	printf("Sum is %d\n", sum(A, SIZE));
+	
+	printf("Avg is %d\n", sum(A, SIZE));
+	return 0;
+}
